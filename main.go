@@ -65,7 +65,7 @@ func sub(i int,url string) {
     header.Add("Sec-Fetch-Mode", "cors")
     header.Add("Sec-Fetch-Site", "same-origin")
     req.Header = header
-    proxies, err := LoadProxies()
+    /*proxies, err := LoadProxies()
     if err != nil {
         return
     }
@@ -76,7 +76,7 @@ func sub(i int,url string) {
     }
     proxyURL, _ := url.Parse(randomProxy)
     proxy := http.ProxyURL(proxyURL)
-    req.Proxy = proxy
+    req.Proxy = proxy*/
     resp, err := http.DefaultClient.Do(req)
     if err != nil {
 	       return
